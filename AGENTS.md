@@ -53,11 +53,19 @@ Portfolio applications consume domain plugins and sovereign MCP servers from the
 - **Runtime Discovery**: Registered in `.agents/plugins.json` pointing to `node_modules/@tupynambalucas-dev/agent-mesh/plugins/packages`.
 - **Sovereign Execution**: MCP servers run via self-contained launchers (`scripts/launcher.cjs`) and committed bundles (`dist/bin.cjs`).
 
+## Architectural Plans & Artifact Dual-Storage Standard
+
+Architectural blueprints, technical plans, and master plans follow strict enterprise storage standards:
+- **Storage Location**: Blueprints reside in `<repo>/.agents/plans/<plan-slug>/`.
+- **Topologies**: Topology 1 (Single-File Plan) for atomic refactors/features; Topology 2 (Multi-Artifact Plan Suite) for multi-domain frameworks with master `README.md` and numbered domain documents.
+- **Dual-Storage Invariant**: Whenever an agent creates a plan artifact in the Antigravity conversation directory (`<appDataDir>/brain/<conversation-id>/`), an identical synchronized copy MUST ALWAYS be mirrored in `<repo>/.agents/plans/<plan-slug>/`.
+- **Ignore & Index Triad**: All repositories ignore `.agents/plans/` and `plans/` in `.gitignore`, while explicitly un-ignoring them in `.ignore` and `.rgignore` (`!.agents/plans/`, `!.agents/plans/**`, `!plans/`, `!plans/**`) and setting `"search.useIgnoreFiles": false` in `.vscode/settings.json` so files can always be attached with `@`.
+
 ## Required Skills
 
 Agents operating at the `org-ecosystem` meta-repository layer MUST autonomously engage the domain skills:
 
-- **Atelier Plugin (`@tupynambalucas-dev/plugin-atelier`)**: `router-architect`, `skill-architect`, `rule-architect`, `hook-architect`, `plugin-architect`.
-- **Repository Governance Plugin (`@tupynambalucas-dev/plugin-repo`)**: `readme-architect`, `monorepo-architect`, `community-health-architect`, `license-architect`.
+- **Atelier Plugin (`@tupynambalucas-dev/plugin-atelier`)**: `router-architect`, `skill-architect`, `rule-architect`, `hook-architect`, `plugin-architect`, `plan-architect`.
+- **Repository Governance Plugin (`@tupynambalucas-dev/plugin-repo`)**: `readme-architect`, `monorepo-architect`, `community-health-architect`, `license-architect`, `github-standards-architect`, `mani-operator`.
 - **GitHub Flow Plugin (`@tupynambalucas-dev/plugin-github-flow`)**: `github-flow-operator`, `github-actions-operator`.
 - **Secrets Plugin (`@tupynambalucas-dev/plugin-secrets`)**: `infisical-vault-operator`, `secret-rotation-operator`.
