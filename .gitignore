@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.idea/
+
+# Local Git Config Templates and Backups
+git-config/
+
+# Environment and Secrets (CRITICAL)
+.env
+*.env.*
+.env.*
+!.env.example
+!*.env.example*
+
+# Keys, Certificates and Keyrings
+*.pem
+*.key
+keys/
+
+# Managed Repositories (Orchestrated independently via mani)
+commercial/
+internal/
+oss/

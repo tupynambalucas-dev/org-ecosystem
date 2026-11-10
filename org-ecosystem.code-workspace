@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "name": "org-ecosystem (Ecosystem Orchestrator)",
+      "path": "."
+    },
+    {
+      "name": "omnichannel (Commercial SaaS Monorepo)",
+      "path": "commercial/omnichannel"
+    },
+    {
+      "name": "tessel (Proprietary Enterprise Monorepo)",
+      "path": "internal/tessel"
+    }
+  ],
+  "settings": {
+    "git.autoRepositoryDetection": true,
+    "search.useIgnoreFiles": false,
+    "search.useGlobalIgnoreFiles": false,
+    "search.useParentIgnoreFiles": false,
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/.pnpm-store": true,
+      "**/.git": true,
+      "**/dist": true,
+      "**/.turbo": true
+    },
+    "files.exclude": {
+      "**/.git": false
+    }
+  }
+}

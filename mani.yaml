@@ -1,0 +1,66 @@
+# Manifest specification: https://manicli.com
+# tupynambalucas-dev Product Portfolio & Ecosystem Manifest
+
+sync_gitignore: false
+
+projects:
+  # --- COMMERCIAL SAAS SOLUTIONS ---
+  omnichannel:
+    path: commercial/omnichannel
+    url: git@github.com:tupynambalucas-dev/omnichannel.git
+    desc: Commercial Omnichannel communication platform and SaaS engine (Turborepo Monorepo).
+    tags:
+      - commercial
+      - saas
+      - omnichannel
+      - monorepo
+
+  # --- PROPRIETARY INTERNAL ASSETS ---
+  tessel:
+    path: internal/tessel
+    url: git@github.com:tupynambalucas-dev/tessel.git
+    desc: Proprietary enterprise core platform and internal software asset (Turborepo Monorepo).
+    tags:
+      - internal
+      - proprietary
+      - tessel
+      - monorepo
+
+targets:
+  all:
+    all: true
+  commercial:
+    tags: [commercial]
+  internal:
+    tags: [internal]
+  oss:
+    tags: [oss]
+
+tasks:
+  status:
+    desc: Check Git status across all ecosystem projects
+    target: all
+    cmd: git status -s
+    spec:
+      output: stream
+
+  fetch:
+    desc: Fetch latest changes from remote origin across all projects
+    target: all
+    cmd: git fetch origin --prune
+    spec:
+      output: stream
+
+  pull:
+    desc: Pull latest main branch updates across all projects
+    target: all
+    cmd: git pull origin main
+    spec:
+      output: stream
+
+  branch:
+    desc: Display current active branch for all projects
+    target: all
+    cmd: git branch --show-current
+    spec:
+      output: table
