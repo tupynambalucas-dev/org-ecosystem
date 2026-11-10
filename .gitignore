@@ -27,3 +27,6 @@ keys/
 commercial/
 internal/
 oss/
+# Agent Plans Container (Ignored by Git, preserved for local @ attachment via .ignore / .rgignore)
+.agents/plans/
+plans/
