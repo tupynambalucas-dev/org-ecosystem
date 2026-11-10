@@ -1,3 +1,6 @@
 !commercial/
+!commercial/**
 !internal/
+!internal/**
 !oss/
+!oss/**
