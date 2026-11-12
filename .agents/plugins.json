@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "path": "../org-core/agent-mesh/plugins/packages"
+    },
+    {
+      "path": "../org-core/platform/.agents/plugins"
+    },
+    {
       "path": "commercial/omnichannel/node_modules/@tupynambalucas-dev/agent-mesh/plugins/packages"
     }
   ]
